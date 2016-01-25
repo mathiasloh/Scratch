@@ -50,7 +50,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Scratch.urls'
+ROOT_URLCONF = 'web_settings.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Scratch.wsgi.application'
+WSGI_APPLICATION = 'web_settings.wsgi.application'
 
 
 # Database
