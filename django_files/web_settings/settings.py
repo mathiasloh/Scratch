@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Insert 3rd-party apps here
+
+    # Insert our own apps here
+    'home_page'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -55,7 +59,7 @@ ROOT_URLCONF = 'web_settings.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +123,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Important static files (admin stuff)
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
+
+# static files of our project
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static", "our_static"),
+#    '/var/www/static/',
+)
+
+"""
+STATICFILES_DIRS copies files from our_static folder directly to our future
+server location STATIC_ROOT
+"""
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
+
+#Crispy form tags settings
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+#Django registration redux settings
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+SITE_ID = 1
+
