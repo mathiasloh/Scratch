@@ -1,16 +1,47 @@
-<!-- DOCTYPE html -->
-<html>
-<head>
-	<title>Scratch | {% block title %}  {% endblock %}</title>
-	{% include "navbar.html" %}
-</head>
-
-<body>
-{% block content %}
-
-{% endblock %}
-</body>
+{% load staticfiles %}
 
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'head_css.html' %}
 
+
+    <style>
+    {% block style %}
+
+
+    {% endblock style %}
+    </style>
+
+
+  </head>
+
+  <body>
+  {% include 'navbar.html' %}
+
+
+
+<!--     <div class="container"> -->
+    {% block jumbotron %}
+  
+    {% endblock jumbotron %}
+
+
+    {% block content %}
+
+
+
+    {% endblock content %}
+
+<!--     </div> -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy INC16 2018. Ecole Centrale Paris</p>
+      </div>
+    </footer>
+    {% include 'javascript.html' %}
+
+
+  </body>
 </html>

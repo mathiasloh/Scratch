@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Insert 3rd-party apps here
-    'crispy_forms' # for better forms formatting
-    'registration' # for better registration formatting
+    'crispy_forms', # for better forms formatting
+    'registration', # for better registration formatting
     # Insert our own apps here
-    'home_page'
+    'home_page',
 ]
 
 MIDDLEWARE_CLASSES = [
