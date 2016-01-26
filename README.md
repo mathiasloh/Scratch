@@ -6,7 +6,7 @@ We will use [Git/Github](https://desktop.github.com/) for version controls. This
 ### Software versions
   1. Python3.4 and above.  [Link to download](https://www.python.org/downloads/).
   2. Pip3. Automatically installed for Python3.4+
-  3. Django 1.9.1 and other plugins. Using Command Prompt (Windows) or Terminal (Mac), run the following commands (use ```pip3``` if mac)
+  3. Django 1.9.1 and other plugins. Using Command Prompt (Windows) or Terminal (Mac), run the following commands (use ```pip3``` if mac)  
     ```
     pip install django  
     ```  
