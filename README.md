@@ -6,15 +6,15 @@ We will use [Git/Github](https://desktop.github.com/) for version controls. This
 ### Software versions
   1. Python3.4 and above.  [Link to download](https://www.python.org/downloads/).
   2. Pip3. Automatically installed for Python3.4+
-  3. Django 1.9.1 and other plugins. Using Command Prompt (Windows) or Terminal (Mac), run the following commands  
+  3. Django 1.9.1 and other plugins. Using Command Prompt (Windows) or Terminal (Mac), run the following commands (use ```pip3``` if mac)
     ```
-    pip3 install django  
+    pip install django  
     ```  
     ```
-    pip3 install django-registration-redux  
+    pip install django-registration-redux  
     ```  
     ``` 
-    pip3 install django-crispy-forms  
+    pip install django-crispy-forms  
     ```  
     **! Attention !** If you are running on a mac, you might need a ```sudo``` behind each command  
 
@@ -33,12 +33,12 @@ Again, using either command prompt [(tutorial)](http://cli.learncodethehardway.o
 cd \<downloaded folder>\django_files\ (Windows)  
 cd /<downloaded folder>/django_files/ (Mac)
 ```  
-After which, run the following commands
+After which, run the following commands (use ```python3``` if mac)
 ``` sh
-python3 manage.py collectstatic
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py runserver
+python manage.py collectstatic
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
 ```
 - The first statement is used whenever we included new static files to our ```\django_files\static\our_static``` folder. This will
 automatically add files into our ```/static_in_env/``` folder. 
