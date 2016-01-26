@@ -27,7 +27,7 @@ In **django_files** folder, it contains all our files that generates webpages, a
 only you will be able to view the server yourself. At the end of the project, we will need to find a **web hosting services that includes Python** to set up our 
 server on _production mode_. 
 
-## How to run the server  
+### How to run the server  
 Again, using either command prompt [(tutorial)](http://cli.learncodethehardway.org/book/) or terminal [(tutorial)](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 ``` sh
 cd \<downloaded folder>\django_files\ (Windows)  
