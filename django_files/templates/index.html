@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block head_title %} Welcome | {% endblock %}
 
@@ -37,7 +38,23 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5 featurette-img">
-          <img src="http://www.graoulab.org/wp/wp-content/uploads/2015/08/Scratch.jpeg" height="250" width="345">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="640" height="480" id="flashContent"  name="" class="" align="">
+        <param name="movie" value="default.swf" />
+        <param name="bgcolor" value="#FFFFFF" />
+        
+        <param name="flashvars" value="" />
+                  
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="{% static 'swf/default.swf' %}" width="640" height="480" class="" align="">
+        <param name="bgcolor" value="#FFFFFF" />
+        
+        <param name="flashvars" value="" />       
+        <!--<![endif]-->
+          Get <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Embedded with the help of <a href="http://embed-swf.org">embed-swf.org</a>.
+        <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
         </div>
       </div>
     </div>
@@ -51,7 +68,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5 col-md-pull-7 featurette-img">
-          <img src="https://scratch.mit.edu/images/about/scratch-in-schools.jpg" height="250" width="450">       
+          <img src="https://scratch.mit.edu/images/about/scratch-in-schools.jpg" height="250" width="350">       
            </div>
       </div>
       </div>

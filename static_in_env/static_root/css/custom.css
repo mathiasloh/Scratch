@@ -15,6 +15,10 @@ overflow: hidden;
 max-height:calc(100vH - 80px);
 }
 
+.no-pics{
+  background: url("")
+}
+
 .middle{
 	vertical-align: middle;
 }
@@ -89,7 +93,7 @@ max-height:calc(100vH - 80px);
 }
 
 .featurette-img{
-	padding-top:4%;
+/*	padding-top:4%;*/
 }
 
 @media (min-width: 992px) {
@@ -98,3 +102,8 @@ max-height:calc(100vH - 80px);
   }
 }
 
+.btn-primary{
+    color: #fff;
+    background-color: #DA5F2D;
+    border-color: #2e6da4
+}
