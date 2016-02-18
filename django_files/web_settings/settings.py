@@ -25,6 +25,12 @@ SECRET_KEY = 'm^uk9)x#s0lt=3(35um@iiylevn_fnt%m#^(uqog_bgqke6&ie'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'contact.scratch4kids@gmail.com'
+EMAIL_HOST_PASSWORD = 'scratch4kids'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     # Insert 3rd-party apps here
     'crispy_forms', # for better forms formatting
     'registration', # for better registration formatting

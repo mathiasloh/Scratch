@@ -23,6 +23,7 @@ import home_page.urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(home_page.urls)),
+    url(r'^accounts/', include('registration.backends.default.urls')),
 ]
 
 if settings.DEBUG:
