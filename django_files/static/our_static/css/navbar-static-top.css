@@ -2,6 +2,16 @@
   margin-bottom: 0px;
 }
 
+.navbar-form{
+    padding: 0px 0.5% 0px 0;
+
+}
+
+.form-group{
+  padding-bottom: 1px;
+  padding-right: 3.5px;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

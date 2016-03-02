@@ -16,6 +16,7 @@
 
 
 {% block jumbotron %}
+  {% if not request.user.is_authenticated %}
 	<div class="jumbotron vertical-center" style="background: url({% static 'img/wallpaper.jpg' %}); no-repeat; center; center; background-size: 100% 100%;">
 	<div class="container">
 <!--           <img src='{% static "img/wallpaper.jpg" %}' class='img-responsive' /> -->
@@ -96,7 +97,7 @@
            </div>
       </div>
       </div>
-
+      {% endif %}
 {% endblock jumbotron %}
 
 {% block content %}
