@@ -8,6 +8,7 @@
             swfobject.registerObject("flashContent", "9.0.0");
             swfobject.registerObject("flashContent2", "9.0.0");
     </script>
+    <script src="{% static 'js/custom.js' %}"></script>
 {% endblock script %}
 
 {% block style %}
@@ -26,10 +27,10 @@
 	    <p>We are here to teach kids cool things!</p>
       <div class="row">
       <div class ="col-md-6">
-	      <p><a class="btn btn-lg btn-primary pull-right" href="../../components/#navbar" role="button">Join us! &raquo;</a></p>
+	      <p><a class="btn btn-lg btn-primary pull-right" href="/accounts/register/" role="button">Join us! &raquo;</a></p>
       </div>
       <div class ="col-md-6">
-       <p><a class="btn btn-lg btn-primary pull-left" href="../../components/#navbar" role="button">Learn more &raquo;</a></p>
+       <p><a class="btn btn-lg btn-primary pull-left" href="#" role="button">Learn more &raquo;</a></p>
        </div>
        </div>
 	    </div>
@@ -39,6 +40,7 @@
  -->	</div>
 	</div>
 
+<!--
 	<hr class="featurette-divider">
     <div class ="jumbotron vertical-center no-pics">
         <div class="row featurette">
@@ -53,16 +55,12 @@
         
         <param name="flashvars" value="" />
                   
-        <!--[if !IE]>-->
         <object type="application/x-shockwave-flash" data="{% static 'swf/Crepe.swf' %}" width="480" height="360" class="" align="">
         <param name="bgcolor" value="#FFFFFF" />
         
         <param name="flashvars" value="" />       
-        <!--<![endif]-->
           Get <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Embedded with the help of <a href="http://embed-swf.org">embed-swf.org</a>.
-        <!--[if !IE]>-->
         </object>
-        <!--<![endif]-->
       </object>
         </div>
       </div>
@@ -83,21 +81,48 @@
         
         <param name="flashvars" value="" />
                   
-        <!--[if !IE]>-->
+
         <object type="application/x-shockwave-flash" data="" width="480" height="360" class="" align="">
         <param name="bgcolor" value="#FFFFFF" />
         
         <param name="flashvars" value="" />       
-        <!--<![endif]-->
+
           Get <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Embedded with the help of <a href="http://embed-swf.org">embed-swf.org</a>.
-        <!--[if !IE]>-->
         </object>
-        <!--<![endif]-->
+  
       </object>       
            </div>
       </div>
+      </div> -->
+      {% else %}
+    <div class="jumbotron" style="no-repeat; center; center; background-size: 100% 100%;">
+  <div class="container">
+      <div class = "col-sm-3">
       </div>
-      {% endif %}
+      <div class = "col-sm-9">
+      <h2 style="text-align:left"> Leaderboards </h2>
+      <table id="leaderboard" class = "table">
+      <thread>
+      <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Stars</th>
+      </tr>
+      </thread>
+      <tbody>
+        {% for obj in queryset %}
+          <td>{{ forloop.counter }}</td>
+          <td>{{ obj.username }}</td>
+          <td>{{ obj.stars }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      </table>
+      </div>
+      </div>
+    </div>
+
+    {% endif %}
 {% endblock jumbotron %}
 
 {% block content %}

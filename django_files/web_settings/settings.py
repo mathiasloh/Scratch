@@ -158,3 +158,8 @@ ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, us
 REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+# AUTH_PROFILE_MODULE = 'home_page.UserProfile'
+
+# TESTS. DO NOT EDIT.
+AUTH_USER_MODEL = 'home_page.UserProfile'
+# CUSTOM_USER_MODEL = 'home_page.CustomUser'

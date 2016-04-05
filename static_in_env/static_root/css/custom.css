@@ -1,5 +1,28 @@
+.userpagenavbar{
+    margin-top: 15px;
+    padding-right: 5px 
+}
+
+.userpagenavbar2{
+    margin-top: 7.4px;
+    padding-right: 5px 
+}
+
+.userpage {
+  background-color: white;
+}
+
+td{
+  text-align: left;
+}
+
 .text-align-center{
 	text-align: center;
+}
+
+.horizontal-center{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .jumbotron{

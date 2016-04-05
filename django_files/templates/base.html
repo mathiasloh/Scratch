@@ -6,10 +6,12 @@
   <head>
     {% include 'head_css.html' %}
 
+    {% include 'javascript.html' %}
     {% block scripts %}
 
     {% endblock scripts %}
     <style>
+
     {% block style %}
 
 
@@ -26,7 +28,7 @@
 
 <!--     <div class="container"> -->
     {% block jumbotron %}
-  
+    
     {% endblock jumbotron %}
 
 
@@ -37,12 +39,14 @@
     {% endblock content %}
 
 <!--     </div> -->
-    <footer class="footer">
+    {% if not request.user.is_authenticated %}
+    <footer class="footer text-align-center" style="background-color:white">
       <div class="container">
         <p>&copy INC16 2015-2016, Ecole Centrale Paris. All rights reserved.</p>
       </div>
     </footer>
-    {% include 'javascript.html' %}
+    {% endif %}
+
 
 
   </body>

@@ -4,7 +4,7 @@
 
 
 {% block content %}
-<div class='row'>
+<div class='row vertical-center'>
 <div class='col-sm-6 col-sm-offset-3'>
 <h1>Register for free!</h1>
 <form method="post" action=".">
@@ -13,15 +13,16 @@
 
   <input class='btn btn-block btn-primary' type="submit" value="{% trans 'Join' %}" />
 </form>
-</div>
-</div>
-
 <hr/>
 <div class='row'>
 <div class='col-sm-6 col-sm-offset-3 text-align-center'>
 <p>Need to <a href="{% url 'auth_login' %}">Login</a>?</p>
 </div>
 </div>
+
+</div>
+</div>
+
 
 
 {% endblock %}
